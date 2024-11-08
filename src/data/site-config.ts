@@ -39,12 +39,13 @@ export type SiteConfig = {
 };
 
 const siteConfig: SiteConfig = {
-  title: 'Dante',
-  subtitle: 'Minimal Astro.js theme',
-  description: 'Astro.js and Tailwind CSS theme for blog and portfolio by justgoodui.com',
+  title: 'Emily J. Holland',
+  subtitle: 'Emily J. Holland',
+  description:
+    'Assistant Professor in the Russia Maritime Studies Institute at the United States Naval War College and Deputy Political Advisor for Critical Undersea Infrastructure at NATO.',
   image: {
-    src: '/dante-preview.jpg',
-    alt: 'Dante - Astro.js and Tailwind CSS theme'
+    src: '/emily-2.jpeg',
+    alt: 'Emily J. Holland'
   },
   headerNavLinks: [
     {
