@@ -1,0 +1,53 @@
+---
+import type { GetStaticPathsOptions, Page } from 'astro';
+import { type CollectionEntry, getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ProjectPreview from '../../components/ProjectPreview.astro';
+import siteConfig from '../../data/site-config';
+import { sortItemsByDateDesc } from '../../utils/data-utils';
+import publications from '../../content/research/publications.json';
+import policyOpinion from '../../content/research/policy-opinion.json';
+
+export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
+  const research = (await getCollection('research')).sort(sortItemsByDateDesc);
+
+  return paginate(research, { pageSize: siteConfig.researchPerPage || 6 });
+}
+
+type Props = { page: Page<CollectionEntry<'research'>> };
+
+const { page } = Astro.props;
+---
+
+<BaseLayout
+  description="Explore diverse pieces of research showcasing my passion and expertise"
+  image={{ src: '/dante-preview.jpg', alt: 'The preview of the site' }}
+  showHeader={false}
+  title="Research"
+>
+  <h1
+    class="mb-12 text-3xl leading-tight font-serif italic sm:mb-16 sm:text-4xl font-medium"
+  >
+    Research
+  </h1>
+  <h2
+    class="mb-12 text-2xl leading-tight font-serif italic sm:mb-16 sm:text-3xl"
+  >
+    Publications
+  </h2>
+  {
+    publications.map((publication) => (
+      <ProjectPreview class="mb-10 sm:mb-12" publication={publication} />
+    ))
+  }
+  <h2
+    class="mt-28 mb-12 text-2xl leading-tight font-serif italic sm:mb-16 sm:text-3xl"
+  >
+    Policy & Opinion
+  </h2>
+  {
+    policyOpinion.map((publication) => (
+      <ProjectPreview class="mb-10 sm:mb-12" publication={publication} />
+    ))
+  }
+</BaseLayout>

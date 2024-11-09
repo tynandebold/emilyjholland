@@ -12,7 +12,7 @@ const seoSchema = z.object({
   pageType: z.enum(['website', 'article']).default('website')
 });
 
-const blog = defineCollection({
+const media = defineCollection({
   schema: z.object({
     title: z.string(),
     excerpt: z.string().optional(),
@@ -31,14 +31,24 @@ const pages = defineCollection({
   })
 });
 
-const projects = defineCollection({
+const publications = defineCollection({
   schema: z.object({
     title: z.string(),
     description: z.string().optional(),
-    publishDate: z.coerce.date(),
-    isFeatured: z.boolean().default(false),
+    publishDate: z.coerce.date().optional(),
+    isFeatured: z.boolean().default(false).optional(),
     seo: seoSchema.optional()
   })
 });
 
-export const collections = { blog, pages, projects };
+const policyOpinion = defineCollection({
+  schema: z.object({
+    title: z.string(),
+    description: z.string().optional(),
+    publishDate: z.coerce.date().optional(),
+    isFeatured: z.boolean().default(false).optional(),
+    seo: seoSchema.optional()
+  })
+});
+
+export const collections = { media, pages, publications, policyOpinion };
