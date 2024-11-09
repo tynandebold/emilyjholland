@@ -13,10 +13,6 @@ export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
 
   return paginate(research, { pageSize: siteConfig.researchPerPage || 6 });
 }
-
-type Props = { page: Page<CollectionEntry<'research'>> };
-
-const { page } = Astro.props;
 ---
 
 <BaseLayout
