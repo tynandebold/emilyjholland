@@ -11,9 +11,6 @@ import publications from '../content/research/publications.json';
 
 const posts = (await getCollection('media')).sort(sortItemsByDateDesc);
 const featuredPosts = posts.filter(({ data }) => data.isFeatured);
-
-const research = (await getCollection('research')).sort(sortItemsByDateDesc);
-const featuredResearch = research.filter(({ data }) => data.isFeatured);
 ---
 
 <BaseLayout
@@ -25,7 +22,7 @@ const featuredResearch = research.filter(({ data }) => data.isFeatured);
   {
     publications?.length > 0 && (
       <div class="mb-16 sm:mb-24">
-        <h2 class="mb-12 text-xl font-serif italic sm:mb-16 sm:text-2xl">
+        <h2 class="mb-12 text-xl font-serif italic sm:mb-16 sm:text-4xl">
           Research
         </h2>
         {publications.slice(0, 3).map((publication) => (
@@ -44,7 +41,7 @@ const featuredResearch = research.filter(({ data }) => data.isFeatured);
   {
     featuredPosts?.length > 0 && (
       <div class="mb-16 sm:mb-24">
-        <h2 class="mb-12 text-xl font-serif italic sm:mb-16 sm:text-2xl">
+        <h2 class="mb-12 text-xl font-serif italic sm:mb-16 sm:text-4xl">
           Writing
         </h2>
         {featuredPosts.map((post) => (
