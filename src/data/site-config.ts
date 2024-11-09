@@ -44,7 +44,7 @@ const siteConfig: SiteConfig = {
   description:
     'Assistant Professor in the Russia Maritime Studies Institute at the United States Naval War College and Deputy Political Advisor for Critical Undersea Infrastructure at NATO.',
   image: {
-    src: '/emily-2.jpeg',
+    src: '/emily.jpg',
     alt: 'Emily J. Holland'
   },
   headerNavLinks: [
@@ -53,12 +53,12 @@ const siteConfig: SiteConfig = {
       href: '/'
     },
     {
-      text: 'Projects',
-      href: '/projects'
+      text: 'Research',
+      href: '/research'
     },
     {
-      text: 'Blog',
-      href: '/blog'
+      text: 'Media',
+      href: '/media'
     },
     {
       text: 'Tags',
@@ -73,28 +73,16 @@ const siteConfig: SiteConfig = {
     {
       text: 'Contact',
       href: '/contact'
-    },
-    {
-      text: 'Terms',
-      href: '/terms'
-    },
-    {
-      text: 'Download theme',
-      href: 'https://github.com/JustGoodUI/dante-astro-theme'
     }
   ],
   socialLinks: [
     {
-      text: 'Dribbble',
-      href: 'https://dribbble.com/'
-    },
-    {
-      text: 'Instagram',
-      href: 'https://instagram.com/'
-    },
-    {
       text: 'X/Twitter',
-      href: 'https://twitter.com/'
+      href: 'https://twitter.com/emilyjholland'
+    },
+    {
+      text: 'LinkedIn',
+      href: 'https://www.linkedin.com/in/emily-holland-00842b4/'
     }
   ],
   hero: {
@@ -102,7 +90,7 @@ const siteConfig: SiteConfig = {
     subtitle: 'Deputy POLAD for CUI at NATO',
     text: "I am an Assistant Professor in the Russia Maritime Studies Institute at the United States Naval War College. I am also currently the Deputy Political Advisor for Critical Undersea Infrastructure at NATO Maritime Command (MARCOM). I received my Ph.D. in political science from Columbia University in May 2017 and was a post-doctoral fellow at Harvard's Davis Center for Russian and Eurasian Studies during the 2017-2018 academic year. Along with co-authors Josh Busby (UT Austin) and Morgan Bazilian (Colorado School of Mines), I am the recipient of a 2023 MINERVA DECUR award to investigate Critical Minerals, Battery Technology, and Reducing Dependence on Hostile Suppliers in Clean Energy Supply Chains.<br/><br/>I research energy politics, Russian foreign policy, US-Russia relations, nuclear geopolitics, populism and European Foreign Policy. My work has appeared in Foreign Affairs, Foreign Policy, The Washington Post, Newsweek, War on the Rocks, Lawfare, the Journal of International Affairs, The Christian Science Monitor, Inkstick Media, Defense Post, Duck of Minerva, The London School of Economics United States Politics Blog, the Georgetown Journal of International Affairs and others. Media appearances include CNN, Government Matters, The Energy Show, and the WarCast. My scholarship has also been featured in The Washington Post and Vox. I blog at Commenting Together.",
     image: {
-      src: '/emily-2.jpeg',
+      src: '/emily.jpg',
       alt: 'Emily J. Holland'
     },
     actions: [
