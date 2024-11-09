@@ -64,4 +64,4 @@ npm install tailwindcss
 
 Tailwind CSS has emerged as a powerhouse in modern web development. Its utility-first approach, flexibility, and developer-friendly features have made it a top choice for front-end developers worldwide. Whether you're a seasoned developer looking to streamline your workflow or a newcomer seeking a versatile CSS framework, Tailwind CSS is worth exploring.
 
-As the web development landscape continues to evolve, Tailwind CSS stands as a testament to the power of innovation in simplifying and enhancing the way we build beautiful and responsive web applications. Give it a try, and you might find that it transforms the way you approach styling in your projects.
+As the web development landscape continues to evolve, Tailwind CSS stands as a testament to the power of innovation in simplifying and enhancing the way we build beautiful and responsive web applications. Give it a try, and you might find that it transforms the way you approach styling in your research.

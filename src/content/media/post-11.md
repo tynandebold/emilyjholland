@@ -59,7 +59,7 @@ Are you interested in embarking on a rewarding career as a front-end developer o
 
 ## Stage 5: Real-World Experience and Career Advancement
 
-**Building Projects:** Create a portfolio of real-world projects to showcase your skills.
+**Building Research:** Create a portfolio of real-world research to showcase your skills.
 
 **Networking:** Attend meetups, conferences, and online communities to connect with other front-end developers.
 
