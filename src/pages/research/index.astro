@@ -1,18 +1,8 @@
 ---
-import type { GetStaticPathsOptions, Page } from 'astro';
-import { type CollectionEntry, getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import ProjectPreview from '../../components/ProjectPreview.astro';
-import siteConfig from '../../data/site-config';
-import { sortItemsByDateDesc } from '../../utils/data-utils';
 import publications from '../../content/research/publications.json';
 import policyOpinion from '../../content/research/policy-opinion.json';
-
-export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
-  const research = (await getCollection('research')).sort(sortItemsByDateDesc);
-
-  return paginate(research, { pageSize: siteConfig.researchPerPage || 6 });
-}
 ---
 
 <BaseLayout

@@ -12,18 +12,6 @@ const seoSchema = z.object({
   pageType: z.enum(['website', 'article']).default('website')
 });
 
-const media = defineCollection({
-  schema: z.object({
-    title: z.string(),
-    excerpt: z.string().optional(),
-    publishDate: z.coerce.date(),
-    updatedDate: z.coerce.date().optional(),
-    isFeatured: z.boolean().default(false),
-    tags: z.array(z.string()).default([]),
-    seo: seoSchema.optional()
-  })
-});
-
 const pages = defineCollection({
   schema: z.object({
     title: z.string(),
@@ -32,23 +20,39 @@ const pages = defineCollection({
 });
 
 const publications = defineCollection({
-  schema: z.object({
-    title: z.string(),
-    description: z.string().optional(),
-    publishDate: z.coerce.date().optional(),
-    isFeatured: z.boolean().default(false).optional(),
-    seo: seoSchema.optional()
-  })
+  schema: z.array(
+    z.object({
+      title: z.string(),
+      url: z.string().optional(),
+      date: z.string().optional(),
+      publication: z.string().optional(),
+      coauthors: z.string().optional()
+    })
+  )
 });
 
 const policyOpinion = defineCollection({
-  schema: z.object({
-    title: z.string(),
-    description: z.string().optional(),
-    publishDate: z.coerce.date().optional(),
-    isFeatured: z.boolean().default(false).optional(),
-    seo: seoSchema.optional()
-  })
+  schema: z.array(
+    z.object({
+      title: z.string(),
+      url: z.string().optional(),
+      date: z.string().optional(),
+      publication: z.string().optional(),
+      coauthors: z.string().optional()
+    })
+  )
 });
 
-export const collections = { media, pages, publications, policyOpinion };
+const media = defineCollection({
+  type: 'data',
+  schema: z.array(
+    z.object({
+      title: z.string(),
+      url: z.string().optional(),
+      date: z.string().optional(),
+      publication: z.string().optional()
+    })
+  )
+});
+
+export const collections = { pages, publications, policyOpinion, media };

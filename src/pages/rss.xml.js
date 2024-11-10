@@ -5,6 +5,7 @@ import { sortItemsByDateDesc } from '../utils/data-utils.ts';
 
 export async function GET(context) {
   const posts = (await getCollection('media')).sort(sortItemsByDateDesc);
+
   return rss({
     title: siteConfig.title,
     description: siteConfig.description,
@@ -13,7 +14,7 @@ export async function GET(context) {
       title: item.data.title,
       description: item.data.excerpt,
       link: `/media/${item.slug}/`,
-      pubDate: item.data.publishDate.setUTCHours(0)
+      pubDate: item.data.date?.setUTCHours(0)
     }))
   });
 }

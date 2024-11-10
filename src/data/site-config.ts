@@ -66,7 +66,7 @@ const siteConfig: SiteConfig = {
     },
     {
       text: 'CV',
-      href: 'https://github.com/tynandebold/emilyjholland/pull/1'
+      href: '/emily-j-holland-cv.pdf'
     }
   ],
   footerNavLinks: [
@@ -88,7 +88,7 @@ const siteConfig: SiteConfig = {
     },
     {
       text: 'CV',
-      href: 'https://github.com/tynandebold/emilyjholland/pull/1'
+      href: '/emily-j-holland-cv.pdf'
     }
   ],
   socialLinks: [
@@ -111,7 +111,7 @@ const siteConfig: SiteConfig = {
     },
     actions: [
       {
-        text: 'Get in Touch',
+        text: 'Get in touch',
         href: '/contact'
       }
     ]
