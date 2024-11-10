@@ -29,21 +29,136 @@ export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
   <h2
     class="mb-12 text-2xl leading-tight font-serif italic sm:mb-16 sm:text-3xl"
   >
-    Publications
+    Current projects
   </h2>
-  {
-    publications.map((publication) => (
-      <ProjectPreview class="mb-10 sm:mb-12" publication={publication} />
-    ))
-  }
-  <h2
-    class="mt-28 mb-12 text-2xl leading-tight font-serif italic sm:mb-16 sm:text-3xl"
-  >
-    Policy & Opinion
-  </h2>
-  {
-    policyOpinion.map((publication) => (
-      <ProjectPreview class="mb-10 sm:mb-12" publication={publication} />
-    ))
-  }
+  <div class="divide-y divide-gray-400">
+    <div class="max-w-none prose prose-dante sm:prose-lg mb-16">
+      <h2
+        class="text-xl leading-tight font-serif font-medium group-hover:underline group-hover:decoration-dashed group-hover:underline-offset-4 group-hover:decoration-1 sm:text-2xl"
+        style="margin-bottom: 0px;"
+      >
+        2023 Minerva Defense Education and Civilian University Partnership Award
+      </h2>
+      <div class="mt-1 text-sm leading-normal" style="margin-top: 0.25rem;">
+        "Critical Minerals, Battery Technology, and Reducing Dependence on
+        Hostile Suppliers in the Clean Energy Supply Chain"
+      </div>
+      <p>ABSTRACT</p>
+      <p>
+        The clean energy transition will be minerals and metals intensive.
+        Currently, supply chains are overwhelmingly reliant on imports from
+        China. Given rising geo-strategic tensions between the United States and
+        China, that dependence has potentially troubling implications for U.S.
+        national security. In order to understand whether and how such
+        dependence might create national security risks requires an exploration
+        into the nature and extent of likely future demand for and supplies of
+        raw materials and intermediate inputs as the scope and scale of demand
+        for batteries and other inputs increase. Further, although metals and
+        minerals have different properties from liquid fuels, they potentially
+        can be employed as coercive foreign policy tools. The control of energy
+        supplies was the basis for the 1973 oil crisis and is causing
+        significant global shifts as a result of Russia’s February 2022 invasion
+        of Ukraine. Such an effort with minerals and metals, if it were to be
+        employed by the PRC, could potentially cause significant disruption to
+        Western economies and national security.
+      </p>
+      <p>
+        The project, what we term “Minerals, Batteries, and Clean Energy”
+        (MB-CE), aims to interrogate more fully foundational social science
+        questions, particularly important since the U.S. has costly plans to
+        diversify its supply chains for these materials. These diversification
+        plans could raise the costs associated with the clean energy transition
+        and will require significant transformations in trade and alliance
+        patterns. The MB-CE project will use two expert roundtable convenings to
+        collect state-of-the-art social science-informed approaches to modeling
+        and understanding these questions.
+      </p>
+      <p>
+        The core contribution of MB-CE to social science will be surfacing best
+        practices in understanding and modeling this dynamic decision space,
+        identifying critical gaps and potential paths forward for overcoming
+        them at the intersection of technology, society, and security. The
+        implications for national security are a more robust analytical basis
+        for decision-making. Given the stakes, including revived geo-strategic
+        competition with China as well as a re-orientation of the U.S. national
+        economy to revive manufacturing, an examination of the foundations for
+        the emergent turn to diversification of supply chains and on-shoring and
+        ally-shoring of supply is important and necessary.
+      </p>
+
+      <h2
+        class="text-xl leading-tight font-serif font-medium group-hover:underline group-hover:decoration-dashed group-hover:underline-offset-4 group-hover:decoration-1 sm:text-2xl pt-5"
+        style="margin-bottom: 0px;"
+      >
+        Book Project
+      </h2>
+      <div class="mt-1 text-sm leading-normal" style="margin-top: 0.25rem;">
+        "Poisoned By Gas: Domestic Networks and Energy Security"
+      </div>
+      <p>ABSTRACT</p>
+      <p>
+        Energy security is crucially important for states because it sits at the
+        juncture of security and economic development. Fundamental realpolitik
+        would lead us to expect all energy insecure states to pursue energy
+        security as a first priority, but in fact many states that are highly
+        dependent on energy supplies from another producer state do not do so.
+        The oil crisis of the 1970s fundamentally transformed US foreign policy,
+        yet despite two major crises in the span of three years Ukraine did not
+        reduce its substantial dependence on Russian energy supplies. In the
+        wake of both crises Ukraine actually increased its already substantial
+        dependence on Russian energy supplies through a series of unfavorable
+        contracts. What explains variation in the outcomes of energy security in
+        energy dependent states?
+      </p>
+      <p>
+        The first part of my dissertation demonstrates a wide variety of energy
+        security outcomes throughout Europe despite geographic and historical
+        similarities. My novel theory argues that outcomes of energy security
+        and the international energy trade are driven by domestic level
+        political capture that underlies market transactions in certain states.
+        I demonstrate that the main determinant of energy supply diversification
+        is instead the choice of property rights regime in the consumer state.
+      </p>
+      <p>
+        To develop and test this argument I collected and coded an original
+        dataset of energy dependence over time, which includes information that
+        has not been systematically examined in International Relations or
+        Economics scholarship, on the basis of extensive field research and a
+        new conceptualization of “energy security.” During fieldwork conducted
+        over 18 months in Germany, Hungary, Lithuania, Poland, Russia and
+        Ukraine that included developing personal connections, over 300
+        interviews and archival work, I gathered data on a variety of factors
+        including long-term natural gas contracts (LTCs), the majority of which
+        is published here for the first time. Using quantitative analysis, I
+        demonstrate empirically that when states fail to enforce rule of law
+        property rights regimes, the likelihood of a radical transformation of
+        its energy policy is low. I examine the mechanisms of my model through
+        qualitative case studies in the cases of Ukraine, Lithuania and Hungary.
+      </p>
+    </div>
+    <div>
+      <h2
+        class="mb-12 mt-16 text-2xl leading-tight font-serif italic sm:mb-16 sm:text-3xl"
+      >
+        Publications
+      </h2>
+      {
+        publications.map((publication) => (
+          <ProjectPreview class="mb-10 sm:mb-12" publication={publication} />
+        ))
+      }
+    </div>
+    <div class="mt-16">
+      <h2
+        class="mb-12 text-2xl leading-tight font-serif italic sm:mb-16 sm:text-3xl pt-16"
+      >
+        Policy & Opinion
+      </h2>
+      {
+        policyOpinion.map((publication) => (
+          <ProjectPreview class="mb-10 sm:mb-12" publication={publication} />
+        ))
+      }
+    </div>
+  </div>
 </BaseLayout>
