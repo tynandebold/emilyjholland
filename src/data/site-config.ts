@@ -63,12 +63,16 @@ const siteConfig: SiteConfig = {
     {
       text: 'Contact',
       href: '/contact'
+    },
+    {
+      text: 'CV',
+      href: 'https://github.com/tynandebold/emilyjholland/pull/1'
     }
   ],
   footerNavLinks: [
     {
-      text: 'About',
-      href: '/about'
+      text: 'Home',
+      href: '/'
     },
     {
       text: 'Research',
@@ -81,6 +85,10 @@ const siteConfig: SiteConfig = {
     {
       text: 'Contact',
       href: '/contact'
+    },
+    {
+      text: 'CV',
+      href: 'https://github.com/tynandebold/emilyjholland/pull/1'
     }
   ],
   socialLinks: [
