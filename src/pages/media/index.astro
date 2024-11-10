@@ -1,0 +1,27 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ProjectPreview from '../../components/ProjectPreview.astro';
+import media from '../../content/media/media.json';
+---
+
+<BaseLayout
+  title="Media"
+  description="Embark on a journey of personal insights and experiences through my media"
+  image={{ src: '/dante-preview.jpg', alt: 'The preview of the site' }}
+  showHeader={false}
+>
+  <h1
+    class="mb-12 text-2xl leading-tight font-serif italic sm:mb-16 sm:text-4xl"
+  >
+    Media
+  </h1>
+  {
+    media.map((publication) => (
+      <ProjectPreview
+        class="mb-10 sm:mb-12"
+        linkText="View media"
+        publication={publication}
+      />
+    ))
+  }
+</BaseLayout>

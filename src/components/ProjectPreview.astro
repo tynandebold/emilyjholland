@@ -12,10 +12,16 @@ type Collection = {
 type Props = {
   class?: string;
   headingLevel?: 'h2' | 'h3';
+  linkText?: string;
   publication: Collection;
 };
 
-const { publication, class: className, headingLevel = 'h2' } = Astro.props;
+const {
+  class: className,
+  headingLevel = 'h2',
+  linkText,
+  publication
+} = Astro.props;
 const { title, url, coauthors, publication: mediaEntity, date } = publication;
 const TitleTag = headingLevel;
 
@@ -40,6 +46,7 @@ const classes = url ? `${baseItemClasses} group` : baseItemClasses;
   <div
     class="hidden font-serif italic opacity-0 transition group-hover:opacity-100 sm:inline-flex sm:gap-1 sm:items-center sm:shrink-0"
   >
-    View piece <ArrowRight class="fill-current w-4 h-4" />
+    {linkText ? linkText : 'View piece'}
+    <ArrowRight class="fill-current w-4 h-4" />
   </div>
 </Element>
