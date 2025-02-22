@@ -11,4 +11,4 @@ Feel free to contact me through any of the methods below:
 My email is [emilyjholland@gmail.com](mailto:emilyjholland@gmail.com).
 
 **Social media:**
-Find me on [X/Twitter](https://twitter.com/emilyjholland) and [LinkedIn](https://www.linkedin.com/in/emily-holland-00842b4/).
+Find me on [X/Twitter](https://twitter.com/emilyjholland) and [LinkedIn](https://www.linkedin.com/in/emily-j-holland/).

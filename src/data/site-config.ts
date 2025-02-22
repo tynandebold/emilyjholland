@@ -98,7 +98,7 @@ const siteConfig: SiteConfig = {
     },
     {
       text: 'LinkedIn',
-      href: 'https://www.linkedin.com/in/emily-holland-00842b4/'
+      href: 'https://www.linkedin.com/in/emily-j-holland/'
     }
   ],
   hero: {
