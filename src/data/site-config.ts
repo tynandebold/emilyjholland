@@ -61,6 +61,10 @@ const siteConfig: SiteConfig = {
       href: '/media'
     },
     {
+      text: 'Consulting',
+      href: '/consulting'
+    },
+    {
       text: 'Contact',
       href: '/contact'
     },
@@ -81,6 +85,10 @@ const siteConfig: SiteConfig = {
     {
       text: 'Media',
       href: '/media'
+    },
+    {
+      text: 'Consulting',
+      href: '/consulting'
     },
     {
       text: 'Contact',
