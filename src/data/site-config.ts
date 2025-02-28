@@ -38,6 +38,33 @@ export type SiteConfig = {
   researchPerPage?: number;
 };
 
+const navigationLinks = [
+  {
+    text: 'Home',
+    href: '/'
+  },
+  {
+    text: 'Research',
+    href: '/research'
+  },
+  {
+    text: 'Media',
+    href: '/media'
+  },
+  {
+    text: 'Consulting',
+    href: '/consulting'
+  },
+  {
+    text: 'CV',
+    href: '/emily-j-holland-cv.pdf'
+  },
+  {
+    text: 'Contact',
+    href: '/contact'
+  }
+];
+
 const siteConfig: SiteConfig = {
   title: 'Emily J. Holland',
   subtitle: 'Emily J. Holland',
@@ -47,58 +74,8 @@ const siteConfig: SiteConfig = {
     src: '/emily.jpg',
     alt: 'Emily J. Holland'
   },
-  headerNavLinks: [
-    {
-      text: 'Home',
-      href: '/'
-    },
-    {
-      text: 'Research',
-      href: '/research'
-    },
-    {
-      text: 'Media',
-      href: '/media'
-    },
-    {
-      text: 'Consulting',
-      href: '/consulting'
-    },
-    {
-      text: 'Contact',
-      href: '/contact'
-    },
-    {
-      text: 'CV',
-      href: '/emily-j-holland-cv.pdf'
-    }
-  ],
-  footerNavLinks: [
-    {
-      text: 'Home',
-      href: '/'
-    },
-    {
-      text: 'Research',
-      href: '/research'
-    },
-    {
-      text: 'Media',
-      href: '/media'
-    },
-    {
-      text: 'Consulting',
-      href: '/consulting'
-    },
-    {
-      text: 'Contact',
-      href: '/contact'
-    },
-    {
-      text: 'CV',
-      href: '/emily-j-holland-cv.pdf'
-    }
-  ],
+  headerNavLinks: navigationLinks,
+  footerNavLinks: navigationLinks,
   socialLinks: [
     {
       text: 'X/Twitter',
