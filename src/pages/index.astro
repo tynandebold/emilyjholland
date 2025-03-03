@@ -2,12 +2,27 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Button from '../components/Button.astro';
 import Hero from '../components/Hero.astro';
+import LogoGrid from '../components/LogoGrid.astro';
 import ProjectPreview from '../components/ProjectPreview.astro';
 import siteConfig from '../data/site-config';
 import publications from '../content/research/publications.json';
 import media from '../content/media/media.json';
 
 const numPreviewItems = 3;
+
+// Add your logo paths here
+const logos = [
+  '/logos/cnn.png',
+  '/logos/fa.png',
+  '/logos/fp.png',
+  '/logos/nato.jpeg',
+  '/logos/newsweek.png',
+  '/logos/npr.jpg',
+  '/logos/vox.jpg',
+  '/logos/war-rocks.png',
+  '/logos/wapo.png',
+  '/logos/world-bank.png'
+];
 ---
 
 <BaseLayout
@@ -16,6 +31,14 @@ const numPreviewItems = 3;
   showHeader={false}
 >
   <Hero />
+
+  <div class="mb-16 sm:mb-24">
+    <h2 class="mb-12 text-xl font-serif italic sm:mb-16 sm:text-4xl">
+      Featured in
+    </h2>
+    <LogoGrid logos={logos} />
+  </div>
+
   {
     publications?.length > 0 && (
       <div class="mb-16 sm:mb-24">
@@ -41,11 +64,11 @@ const numPreviewItems = 3;
         <h2 class="mb-12 text-xl font-serif italic sm:mb-16 sm:text-4xl">
           Media
         </h2>
-        {media.slice(0, numPreviewItems).map((apperance) => (
+        {media.slice(0, numPreviewItems).map((appearance) => (
           <ProjectPreview
             class="mb-10 sm:mb-12"
             headingLevel="h3"
-            publication={apperance}
+            publication={appearance}
           />
         ))}
         <div class="mt-12 sm:mt-16">

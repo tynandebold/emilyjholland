@@ -1,0 +1,42 @@
+---
+interface Props {
+  logos: string[];
+  class?: string;
+}
+
+const { logos, class: className = '' } = Astro.props;
+---
+
+<div class:list={['logo-grid', className]}>
+  {
+    logos.map((logo) => (
+      <div class="logo-container">
+        <img src={logo} alt="" class="max-w-full opacity-90" />
+      </div>
+    ))
+  }
+</div>
+
+<style>
+  .logo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 2rem;
+    align-items: center;
+    justify-items: center;
+    padding: 2rem 0;
+  }
+
+  .logo-container {
+    width: 120px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .logo-container img {
+    max-height: 100%;
+    object-fit: contain;
+  }
+</style>
