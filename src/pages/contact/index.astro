@@ -1,0 +1,39 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  description="Get in touch through email or social media! Let me know how I can help"
+  showHeader={false}
+  title="Contact"
+>
+  <h1
+    class="mb-12 text-3xl leading-tight font-serif italic sm:mb-16 sm:text-4xl font-medium"
+  >
+    Contact
+  </h1>
+  <div class="divide-y divide-gray-400">
+    <div
+      class="max-w-none prose prose-dante sm:prose-lg mb-16 [&_li]:my-0 [&_ul]:my-0"
+    >
+      <p>Feel free to contact me through any of the methods below:</p>
+
+      <p>
+        My email is <a
+          href="mailto:emilyjholland@gmail.com"
+          rel="noopener"
+          title="Send me an email">emilyjholland@gmail.com</a
+        >.
+      </p>
+      <p>
+        I am also active on <a
+          target="_blank"
+          href="https://twitter.com/emilyjholland">X/Twitter</a
+        > and <a
+          target="_blank"
+          href="https://www.linkedin.com/in/emily-j-holland/">LinkedIn</a
+        >.
+      </p>
+    </div>
+  </div>
+</BaseLayout>
