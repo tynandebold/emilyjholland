@@ -19,7 +19,11 @@ const hero = siteConfig.hero;
               {hero.title}
             </h1>
           )}
-          <p class="text-lg mb-8">{hero.subtitle}</p>
+          <p class="text-lg mb-8">
+            {hero.subtitleLine1}
+            <br />
+            {hero.subtitleLine2}
+          </p>
         </div>
         {hero.image?.src && (
           <div class="flex-1">

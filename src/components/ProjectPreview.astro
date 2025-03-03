@@ -7,6 +7,8 @@ type Collection = {
   coauthors?: string;
   publication?: string;
   date?: string;
+  videoPath?: string;
+  youtubeId?: string;
 };
 
 type Props = {
@@ -22,7 +24,15 @@ const {
   linkText,
   publication
 } = Astro.props;
-const { title, url, coauthors, publication: mediaEntity, date } = publication;
+const {
+  title,
+  url,
+  coauthors,
+  publication: mediaEntity,
+  date,
+  videoPath,
+  youtubeId
+} = publication;
 const TitleTag = headingLevel;
 
 const Element = url ? 'a' : 'div';
@@ -42,6 +52,30 @@ const classes = url ? `${baseItemClasses} group` : baseItemClasses;
         mediaEntity ? <span class="italic">{mediaEntity}</span> : null
       }{date ? date : null}
     </div>
+    {
+      videoPath && (
+        <div class="mt-4">
+          <video controls class="w-full max-w-2xl rounded-lg">
+            <source src={videoPath} type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      )
+    }
+    {
+      youtubeId && (
+        <div class="mt-4">
+          <iframe
+            class="w-full max-w-2xl aspect-video rounded-lg"
+            src={`https://www.youtube.com/embed/${youtubeId}`}
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          />
+        </div>
+      )
+    }
   </div>
   <div
     class="hidden font-serif italic opacity-0 transition group-hover:opacity-100 sm:inline-flex sm:gap-1 sm:items-center sm:shrink-0"
